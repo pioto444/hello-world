@@ -1,20 +1,30 @@
-interface Props {
-    source: string;
-    title: string;
-    artist: string;
-    genre: string;
-    releaseYear: number;
-}
+import type { AlbumType } from "../types/Album";
 
-export default function Album({source, title, artist, genre, releaseYear} : Props) {
+export default function AlbumComponent({source, title, artist, genre, releaseYear, tracklist}: AlbumType) {
     return (
-        <div>
-            <img src={source} alt={title} />
-            <div>
-                <h1>{title} - {artist}</h1>
-                <p>{genre}</p> 
-                <p>{releaseYear}</p>
+        <div className="album">
+            <div className="album-details">
+                <img className="album-cover" src={source} alt={`${title} album cover`}/>
+
+                <div className="album-info">
+                    <h2 className="album-title">
+                        {title} <span>— {artist}</span>
+                    </h2>
+
+                    <p className="album-genre">{genre}</p>
+                    <p className="album-year">{releaseYear}</p>
+                </div>
+            </div>
+
+            <div className="album-tracklist">
+                <h3>Tracklist</h3>
+
+                <ol>
+                    {tracklist.map((track, index) => (
+                        <li key={index} className="track">{track.name} - <span className="track-length">{track.length}</span></li>
+                    ))}
+                </ol>
             </div>
         </div>
     );
-} 
+}

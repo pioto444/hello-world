@@ -109,3 +109,84 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; 
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 12px;
+  margin: 12px;
+}
+
+.album-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.album-cover {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.album-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.album-title {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+}
+
+.album-title span {
+  color: #b3b3b3;
+  font-weight: normal;
+}
+
+.album-genre, .album-year {
+  margin: 6px 0;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.album-tracklist {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #444;
+  padding-top: 16px;
+}
+
+.album-tracklist h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.album-tracklist ol {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.album-tracklist li {
+  padding: 5px 0;
+  color: #d0d0d0;
+}
