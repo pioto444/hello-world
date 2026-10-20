@@ -1,4 +1,5 @@
 import type { AlbumType } from "../types/Album";
+import Song from "./Song";
 
 export default function AlbumComponent({source, title, artist, genre, releaseYear, tracklist}: AlbumType) {
     return (
@@ -21,7 +22,7 @@ export default function AlbumComponent({source, title, artist, genre, releaseYea
 
                 <ol>
                     {tracklist.map((track, index) => (
-                        <li key={index} className="track">{track.name} - <span className="track-length">{track.length}</span></li>
+                        <Song index={index} name={track.name} length={track.length}/>
                     ))}
                 </ol>
             </div>

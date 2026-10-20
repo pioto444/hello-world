@@ -1,4 +1,4 @@
-[
+export const albumsData = [
   {
     "id": 1,
     "source": "/public/asap.jpg",
@@ -18,6 +18,10 @@
         {
             "name": "Fine Whine (feat. Joe Fox, Future & M.I.A.)",
             "length": "4:00"
+        },
+        {
+            "name": "L$D",
+            "length": "3:57"
         }
         ]
   },
