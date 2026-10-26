@@ -1,30 +1,45 @@
 import type { AlbumType } from "../types/Album";
-import Song from "./Song";
 
 export default function AlbumComponent({source, title, artist, genre, releaseYear, tracklist}: AlbumType) {
     return (
-        <div className="album">
-            <div className="album-details">
-                <img className="album-cover" src={source} alt={`${title} album cover`}/>
-
+        <div className="card h-100 p-2">
+            <img className="card-img-top" src={source} alt={`${title} album cover`}/>
+            <div className="card-body">
                 <div className="album-info">
-                    <h2 className="album-title">
+                    <h2 className="card-text">
                         {title} <span>— {artist}</span>
                     </h2>
 
-                    <p className="album-genre">{genre}</p>
-                    <p className="album-year">{releaseYear}</p>
+                    <p className="card-text">{genre}</p>
+                    <p className="card-text">{releaseYear}</p>
                 </div>
             </div>
 
-            <div className="album-tracklist">
+            <div className="card-tracklist">
                 <h3>Tracklist</h3>
-
-                <ol>
+                {tracklist.length > 0 ? (
+                    <table className="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tytuł</th>
+                            <th scope="col" className="text-end">
+                            Czas trwania
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody className="table-group-divider">
                     {tracklist.map((track, index) => (
-                        <Song index={index} name={track.name} length={track.length}/>
-                    ))}
-                </ol>
+                        <tr key={index} className="card-track">
+                            <td>{track.name}</td>
+                            <td className="text-end">{track.length}</td>
+                        </tr>
+                    ))} 
+                    </tbody>
+                    </table>
+                ) : (
+                    <p>Brak utworów</p>
+                )}
             </div>
         </div>
     );

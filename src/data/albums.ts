@@ -9,19 +9,19 @@ export const albumsData = [
     "tracklist": [
         {
             "name": "Holy Ghost (feat. Joe Fox)",
-            "length": "3:50"
+            "length": "3:11"
         },
         {
             "name": "Canal St. (feat. Bones)",
-            "length": "3:30"
+            "length": "3:47"
         },
         {
             "name": "Fine Whine (feat. Joe Fox, Future & M.I.A.)",
-            "length": "4:00"
+            "length": "3:38"
         },
         {
             "name": "L$D",
-            "length": "3:57"
+            "length": "3:58"
         }
         ]
   },
@@ -46,5 +46,14 @@ export const albumsData = [
             "length": "3:54"
         }
         ]
+  },
+  {
+    "id": 3,
+    "source": "/public/ye.jpg",
+    "title": "Ye",
+    "artist": "Kanye West",
+    "genre": "Hip Hop",
+    "releaseYear": 2018,
+    "tracklist": []
   }
 ]

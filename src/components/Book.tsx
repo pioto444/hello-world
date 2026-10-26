@@ -7,12 +7,12 @@ interface Props {
 
 export default function Book({source, title, releaseYear, pages} : Props) {
     return (
-        <div className="book-card">
-            <img src={source} alt={title} />
-            <div className="book-info">
-                <h1>{title}</h1>
-                <p>Release year: {releaseYear}</p>
-                <p>Pages: {pages}</p>
+        <div className="card h-100 p-2">
+            <img src={source} alt={title} className="card-img-top" />
+            <div className="card-body">
+                <h1 className="card-title h1">{title}</h1>
+                <p className="card-text mb-1">Release year: {releaseYear}</p>
+                <p className="card-text">Pages: {pages}</p>
             </div>
         </div>
     );

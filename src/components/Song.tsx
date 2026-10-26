@@ -6,6 +6,9 @@ interface Props {
 
 export default function Song({index, name, length}: Props ) {
     return (
-        <li key={index} className="track">{name} - <span className="track-length">{length}</span></li>
+        <tr key={index} className="track">
+            <td>{name}</td>
+            <td><span className="track-length">{length}</span></td>
+        </tr>
     )
 }
